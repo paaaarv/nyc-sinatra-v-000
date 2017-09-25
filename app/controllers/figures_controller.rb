@@ -11,6 +11,7 @@ class FiguresController< ApplicationController
     @titles = Title.all
     @landmarks = Landmark.all
     erb :'figures/new'
+    binding.pry
   end
 
   post '/figures' do
