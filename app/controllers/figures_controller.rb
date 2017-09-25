@@ -44,6 +44,7 @@ class FiguresController< ApplicationController
     @figure = Figure.find(params[:id])
     @titles = Title.all
     @landmarks = Landmark.all
+    binding.pry
     erb :'/figures/edit'
   end
 
