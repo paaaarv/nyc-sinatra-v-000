@@ -49,6 +49,7 @@ class FiguresController< ApplicationController
 
   patch "/figures/:id" do
     @figure = Figure.find(params[:id])
+    binding.pry
     if params["title"]["name"].empty?
       @figure.title_ids = params["figure"]["title_ids"]
       @figure.save
