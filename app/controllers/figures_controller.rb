@@ -50,6 +50,7 @@ class FiguresController< ApplicationController
   post "/figures/:id" do
     binding.pry
     @figure = Figure.find(params[:id])
+    @figure.update(params["figure"])
     if params["title"]["name"].empty?
       @figure.title_ids = params["figure"]["title_ids"]
       @figure.save
