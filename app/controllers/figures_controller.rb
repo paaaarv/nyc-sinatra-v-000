@@ -11,7 +11,6 @@ class FiguresController< ApplicationController
     @titles = Title.all
     @landmarks = Landmark.all
     erb :'figures/new'
-    binding.pry
   end
 
   post '/figures' do
@@ -45,6 +44,7 @@ class FiguresController< ApplicationController
     @figure = Figure.find(params[:id])
     
     erb :'/figures/edit'
+    binding.pry
   end
 
   patch "/figures/:id" do
