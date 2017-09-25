@@ -2,10 +2,9 @@
 <h2><%=@figure.name%></h2>
 <h3><%= @figure.id%> </h3> 
 <%@figure.landmarks.each do |landmark|%>
-  <h4> <%= landmark.name%> </h4> 
-<%end%> 
+  <h4> <%= landmark.name%> </h4>
+<%end%>
 
 <%@figure.titles.each do |title|%>
-  <h4><%=title.name%> </h4> 
-<%end%> 
-
+  <h4><%=title.name%> </h4>
+<%end%>
