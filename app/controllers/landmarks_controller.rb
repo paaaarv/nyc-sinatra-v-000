@@ -29,5 +29,6 @@ class LandmarksController < ApplicationController
     @landmark.update(params["landmark"])
 
     redirect("/landmarks/#{@landmark.id}")
+  end
 
 end
