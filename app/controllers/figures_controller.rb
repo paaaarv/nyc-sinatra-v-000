@@ -51,10 +51,7 @@ class FiguresController< ApplicationController
     binding.pry
     @figure = Figure.find(params[:id])
     @figure.update(params["figure"])
-    if params["title"]["name"].empty?
-      @figure.title_ids = params["figure"]["title_ids"]
-      @figure.save
-    else
+    if !params["title"]["name"].empty?
       @title = Title.find_or_create_by(name: params["title"]["name"])
       @figure.titles << @title
       @figure.save
@@ -62,9 +59,6 @@ class FiguresController< ApplicationController
     if !params["landmark"]["name"].empty?
       @landmark = Landmark.find_or_create_by(name: params["landmark"]["name"])
       @figure.landmarks << @landmark
-      @figure.save
-    else
-      @figure.landmark_ids = params["figure"]["landmark_ids"]
       @figure.save
     end
     redirect("/figures/#{@figure.id}")
