@@ -19,8 +19,8 @@ class LandmarksController < ApplicationController
   end
 
   post "/landmarks" do
-    @landmark = Landmark.create(params["landmark"])
     binding.pry
+    @landmark = Landmark.create(params["landmark"])
 
     redirect("/landmarks/#{@landmark.id}")
   end
