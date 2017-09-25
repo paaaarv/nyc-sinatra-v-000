@@ -47,7 +47,7 @@ class FiguresController< ApplicationController
     erb :'/figures/edit'
   end
 
-  patch "/figures/:id" do
+  post "/figures/:id" do
     @figure = Figure.find(params[:id])
     if params["title"]["name"].empty?
       @figure.title_ids = params["figure"]["title_ids"]
