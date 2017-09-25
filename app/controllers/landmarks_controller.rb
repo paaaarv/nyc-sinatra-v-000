@@ -22,7 +22,7 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.create(params["landmark"])
 
     redirect("/landmarks/#{@landmark.id}")
-  end 
+  end
   
 
 end
