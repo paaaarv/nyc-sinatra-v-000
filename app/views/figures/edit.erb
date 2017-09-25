@@ -1,7 +1,7 @@
 
 <h2> Update <%= @figure.name%> :</h2>
 
-<form action = '/figures' method = "POST">
+<form action = '/figures/<%=@figure.id%>' method = "POST">
   <input type = 'hidden' name = "_method" value = "PATCH">
 
   <label>Figure Name: </label> <br>
